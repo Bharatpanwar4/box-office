@@ -13,7 +13,7 @@ const ShowCard = ({name,image,id,summary})=>{
             <Link to={`/show/${id}`}>Read more</Link>
             <button type="button">Start me</button>
         </div>
-    </div>)
+    </div>)         
 }
 
 export default ShowCard;

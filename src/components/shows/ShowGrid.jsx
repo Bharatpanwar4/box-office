@@ -5,7 +5,7 @@ const ShowGrid = ({ shows }) => {
   const [starredShows,dispatchStarred] =useStarredShows()
 
 
-``
+
 
 const onStarMeClick=(showId)=>{
 const isStarred = starredShows.includes(showId);

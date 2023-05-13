@@ -2,7 +2,7 @@
   "name": "box-office",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Bharatpanwar4.github.io/my-app",
+  "homepage": "https://Bharatpanwar4.github.io/Box-office",
   "dependencies": {
     "@tanstack/react-query": "^4.29.5",
     "@testing-library/jest-dom": "^5.16.5",

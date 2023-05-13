@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const AppTitle = props => {
   const {
-    title = 'box office',
+    title = 'Box Office',
     subtitle = 'Are you looking for a movie or an actor?',
   } = props;
   return (

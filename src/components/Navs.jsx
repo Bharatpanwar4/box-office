@@ -19,7 +19,6 @@ const Navs = () => {
 };
 export default Navs;
 
-
 const NavList = styled.ul`
   display: flex;
   justify-content: center;

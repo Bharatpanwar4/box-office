@@ -3,21 +3,16 @@ import { useStarredShows } from '../../lib/useStarredShows';
 import { FlexGrid } from '../../common/FlexGrid';
 
 const ShowGrid = ({ shows }) => {
-  const [starredShows,dispatchStarred] =useStarredShows()
+  const [starredShows, dispatchStarred] = useStarredShows();
 
-
-
-
-const onStarMeClick=(showId)=>{
-const isStarred = starredShows.includes(showId);
-if(isStarred){
-  dispatchStarred({type:"UNSTAR",showId})
-}
-else{
-  dispatchStarred({type:"STAR",showId})
-}
-}
-
+  const onStarMeClick = showId => {
+    const isStarred = starredShows.includes(showId);
+    if (isStarred) {
+      dispatchStarred({ type: 'UNSTAR', showId });
+    } else {
+      dispatchStarred({ type: 'STAR', showId });
+    }
+  };
 
   return (
     <FlexGrid>

@@ -6,8 +6,6 @@ import ActorsGrid from '../components/actors/ActorsGrid';
 import { useQuery } from '@tanstack/react-query';
 import { TextCenter } from '../common/TextCenter';
 
-
-
 const Home = () => {
   const [filter, setFilter] = useState(null);
 
@@ -45,7 +43,6 @@ const Home = () => {
 
   return (
     <div>
-
       <SearchForm onSearch={onSearch} />
 
       <div>{renderApiData()}</div>
@@ -54,4 +51,3 @@ const Home = () => {
 };
 
 export default Home;
-

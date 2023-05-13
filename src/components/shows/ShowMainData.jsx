@@ -1,36 +1,38 @@
+import styled from 'styled-components';
+import { StarIcon } from '../../common/StarIcon';
+const ShowMainData = ({ image, name, rating, summary, genres }) => {
+  return (
+    <MainDataWrapper>
+      <div className="img-wrap">
+        <img
+          src={image ? image.original : `/public/imagenotfound.png`}
+          alt={name}
+        />
+      </div>
 
-import styled from "styled-components";
-import { StarIcon } from "../../common/StarIcon";
-const ShowMainData = ({image,name,rating,summary,genres})=>{
-    return(
-<MainDataWrapper>
-<div className="img-wrap">
+      <DataSection>
+        <Headline>
+          <h1>{name}</h1>
 
-<img src={image?image.original:`/public/imagenotfound.png`} alt={name}/>
-</div>
+          <div>
+            <StarIcon active />
+            <span>{rating.average || `N/A`}</span>
+          </div>
+        </Headline>
 
-<DataSection>
-<Headline>
-<h1>{name}</h1>
-
-    <div>
-    <StarIcon active/>
-    <span>
-    {rating.average ||`N/A`}
-    </span></div>
-</Headline>
-   
-   <Summary dangerouslySetInnerHTML={{__html:summary}}/>
-   <div>
-    Genres:
-    <Genres>{genres.map((genre)=>(<span key={genre}>{genre}</span>))}</Genres>
-   </div>
-</DataSection>
-
-
-</MainDataWrapper>
-    )
-}
+        <Summary dangerouslySetInnerHTML={{ __html: summary }} />
+        <div>
+          Genres:
+          <Genres>
+            {genres.map(genre => (
+              <span key={genre}>{genre}</span>
+            ))}
+          </Genres>
+        </div>
+      </DataSection>
+    </MainDataWrapper>
+  );
+};
 export default ShowMainData;
 
 const MainDataWrapper = styled.div`

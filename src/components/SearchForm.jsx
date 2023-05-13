@@ -27,40 +27,36 @@ const SearchForm = ({ onSearch }) => {
     <div>
       <form onSubmit={onSubmit}>
         <SearchInput
-        placeholder='Search for something'
+          placeholder="Search for something"
           type="text"
           value={searchStr}
           onChange={onSearchInputChange}
         ></SearchInput>
-<RadiosWrapper>
+        <RadiosWrapper>
+          <CustomRadio
+            label="Shows"
+            name="search-option"
+            value="shows"
+            checked={searchOption === 'shows'}
+            onChange={onRadioChange}
+          />
+          <CustomRadio
+            label="Actors"
+            name="search-option"
+            value="actors"
+            checked={searchOption === 'actors'}
+            onChange={onRadioChange}
+          />
+        </RadiosWrapper>
 
-<CustomRadio
-          label="Shows"
-          name="search-option"
-          value="shows"
-          checked={searchOption === 'shows'}
-          onChange={onRadioChange}
-        />
-        <CustomRadio
-          label="Actors"
-          name="search-option"
-          value="actors"
-          checked={searchOption === 'actors'}
-          onChange={onRadioChange}
-        />
-</RadiosWrapper>
-        
-<SearchButtonWrapper>
-<button type="submit">Search</button>
-
-</SearchButtonWrapper>
-        
+        <SearchButtonWrapper>
+          <button type="submit">Search</button>
+        </SearchButtonWrapper>
       </form>
     </div>
   );
 };
 export default SearchForm;
-
 
 const SearchInput = styled.input`
   display: block;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const AppTitle = props => {
   const {
@@ -13,7 +13,6 @@ const AppTitle = props => {
   );
 };
 export default AppTitle;
-
 
 const TitleWrapper = styled.div`
   text-align: center;

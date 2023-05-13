@@ -5,12 +5,16 @@ import Starred from './pages/Starred';
 import PageNotFound from './pages/PageNotFound';
 import MainLayout from './components/MainLayout';
 import Show from './pages/Show';
+import{ GlobalTheme} from './theme';
 const queryClient = new QueryClient();
 function App() {
-
+ 
   return (
    
     <QueryClientProvider client={queryClient}>
+<GlobalTheme>
+
+
 
 <BrowserRouter>
       <Routes>
@@ -23,7 +27,7 @@ function App() {
         <Route path="*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
-
+</GlobalTheme>
     </QueryClientProvider>
   );
 }

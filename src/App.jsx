@@ -1,10 +1,11 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
+import Show from './pages/Show';
+
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Home from './pages/Home';
 import Starred from './pages/Starred';
 import PageNotFound from './pages/PageNotFound';
 import MainLayout from './components/MainLayout';
-import Show from './pages/Show';
 import { GlobalTheme } from './theme';
 const queryClient = new QueryClient();
 function App() {

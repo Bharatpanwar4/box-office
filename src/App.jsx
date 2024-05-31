@@ -18,8 +18,9 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/starred" element={<Starred />} />
             </Route>
-            <Route path="/show/:showId" element={<Show />} />
             <Route path="*" element={<PageNotFound />} />
+
+            <Route path="/show/:showId" element={<Show />} />
           </Routes>
         </HashRouter>
       </GlobalTheme>
